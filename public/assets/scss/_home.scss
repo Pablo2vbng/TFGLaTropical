@@ -1,0 +1,90 @@
+@use 'vars';
+
+/* ***HOME, CONTACTO & LAYOUTS*** */
+
+.page-wrapper {
+    margin-top: 5rem;
+}
+
+.auth-wrapper {
+    margin-top: 5rem;
+    min-height: 70vh;
+}
+
+.auth-container {
+    max-width: 25rem;
+}
+
+.faq-container {
+    max-width: 50rem;
+}
+
+.contact-container {
+    max-width: 37.5000rem;
+}
+
+.alert-custom {
+    border-radius: 0.7500rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    
+    &--danger {
+        background-color: #fce8e8;
+        border-color: #fce8e8;
+        color: #d00000;
+    }
+}
+
+/* TITULO*/
+.title {
+    &__subtitle {
+        color: var(--secundary-text-color);
+    }
+    &__description {
+        color: var(--secundary-text-color);
+    }
+}
+
+/* CONTACTO / LOGIN */
+.contact {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 1.1250rem; 
+    box-shadow: 0 0.2500rem 1.5000rem rgba(0,0,0,0.04);
+
+    &-tittle__s_color {
+        color: var(--primary-text-color);
+    }
+
+    &-form {
+        &-item-label {
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin-bottom: 0.4rem;
+        }
+
+        &-item-input {
+            border-radius: 0.5000rem;
+            border: 0.0625rem solid var(--border-color);
+            
+            &:focus {
+                border-color: var(--accent-color);
+                box-shadow: 0 0 0 0.2500rem rgba(0, 113, 227, 0.2);
+            }
+        }
+
+        &-button {
+            background-color: var(--btn-bg-color);
+            color: var(--btn-text-color);
+            border: none;
+            padding: 0.8rem;
+            border-radius: 1.2500rem; 
+            font-weight: 600;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: var(--btn-bg-color-hover);
+            }
+        }
+    }
+}

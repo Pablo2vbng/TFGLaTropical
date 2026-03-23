@@ -1,0 +1,19 @@
+@use 'vars';
+@use 'mixins';
+
+/* ***ESTILOS HEADER*** */
+.main-nav { 
+    background-color: var(--nav-bg-color);
+    backdrop-filter: saturate(180%) blur(1.2500rem); 
+    border-bottom: 0.0725rem solid var(--border-color);
+    
+    &__link {
+        color: var(--primary-text-color);
+        font-weight: 500;
+        font-size: 0.9rem;
+        
+        &:hover {
+            color: var(--accent-color) ;
+        }
+    }
+}
