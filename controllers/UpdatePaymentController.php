@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-// PROTECCIÓ: Només admin
+// PSOLO ADMIN ENTRA
 if (!isset($_SESSION['user_id']) || $_SESSION['user_role'] !== 'admin') {
     header("Location: ../public/login.php");
     exit();
@@ -9,8 +9,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['user_role'] !== 'admin') {
 
 require_once '../config/database.php';
 
-// CHULETA -> TABLA: event_user (Campos: id, is_paid)
-
+// PROCESAMIENTO DE LA ACCIÓN DE MARCAR COMO PAGADO
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['registration_id'])) {
     
     $reg_id = (int)$_POST['registration_id'];

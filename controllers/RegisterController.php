@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = trim($_POST['password']);
     
     try {
-
+        //PRIMERA COMPROBACIÓN SI EL MAIL YA EXISTE
         $stmt_check = $conn->prepare("SELECT id FROM users WHERE email = ? LIMIT 1");
         $stmt_check->execute([$email]);
         
@@ -26,7 +26,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         // ENCRIPTAMOS LA CONTRASEÑA
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-        
+
+
+        //DESPUES DE COMPROBAR SI EXISTE INSERTAMOS
         $sql = "INSERT INTO users (name, email, phone, instrument, password) VALUES (?, ?, ?, ?, ?)";
         $stmt = $conn->prepare($sql);
         

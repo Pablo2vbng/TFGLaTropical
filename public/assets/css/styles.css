@@ -15,7 +15,6 @@
   --main-font-family: 'Inter', sans-serif;
 }
 
-/* ***MIXINS*** */
 /* ***GENERAL*** */
 body.page-body {
   background-color: var(--bg-color);

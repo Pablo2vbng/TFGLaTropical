@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     try {
         //CONSULTA
-        $stmt = $conn->prepare("SELECT * FROM users WHERE email = ? LIMIT 1");
+        $stmt = $conn->prepare("SELECT * FROM users WHERE email = ?");
         $stmt->execute([$email]);
         
         // OBTENEMOS DATOS EN UN ARRAY... YA LE HABÍAMOS DICHO A LA CONEXIÓN CÓMO TRABAJAR
