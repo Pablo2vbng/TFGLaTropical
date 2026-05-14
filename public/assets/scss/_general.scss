@@ -1,0 +1,23 @@
+@use 'vars';
+
+/* GENERAL */
+
+.top-margin-scss{
+    min-height: 100vh; 
+    padding-top: 5rem;
+}
+
+body.page-body {
+    background-color: var(--bg-color);
+    color: var(--primary-text-color);
+    font-family: var(--main-font-family);
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    
+    &:hover {
+        text-decoration: underline;
+    }
+}
