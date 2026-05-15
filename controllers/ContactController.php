@@ -12,8 +12,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     $action = $_POST['action'] ?? '';
 
-    // ELIMINAR MENSAJE (GESTIÓN DE ADMIN)
-
     if ($action === 'delete') {
         
         // SEGURIDAD: VERIFICAMOS QUE SOLO EL ADMINISTRADOR PUEDA ELIMINAR MENSAJES

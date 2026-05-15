@@ -14,22 +14,21 @@ require_once '../includes/navbar.php';
 <!-- EL CONTENIDO PRINCIPAL UTILIZA UN MARGIN-TOP DE 80PX PARA NO QUEDAR OCULTO BAJO LA NAVBAR FIXED-TOP -->
 <!-- BOOTSTRAP DOCU: LAYOUT https://getbootstrap.com/docs/5.3/layout/containers/ -->
 <main class="main-content" style="margin-top: 80px;">
-    <?php // SCSS: .main-content CONTROLA EL ESPACIADO PARA NO QUEDAR OCULTO TRAS LA NAVBAR FIXED ?>
 
     <!-- SECCIÓN DE PRESENTACIÓN E HISTORIA -->
     <section class="title text-center py-5">
-        <?php // BOOTSTRAP: .text-center CENTRA EL TEXTO | .py-5 APLICA PADDING VERTICAL ?>
+      
         <div class="container faq-container">
-            <?php // SCSS: .faq-container DEFINE EL ANCHO MÁXIMO OPTIMIZADO PARA LECTURA ?>
+            
             <h1 class="title__title display-3 fw-bold mb-4">
                 La nostra història.<br>
                 <span class="title__subtitle">Pura harmonia.</span>
-                <?php // SCSS: .title__title Y .title__subtitle GESTIONAN EL COLOR Y TAMAÑO DE LA FUENTE INTER ?>
+               
             </h1>
             
             <p class="title__description lead mx-auto">
                 Som la Societat Musical La Tropical de Benigànim. Fem música per a tot tipus d'esdeveniments. Una gran família unida per la passió que emociona en cada nota des de juliol de 1978.
-                <?php // BOOTSTRAP: .lead HACE EL TEXTO MÁS GRANDE | .mx-auto CENTRA EL BLOQUE ?>
+               
             </p>
         </div>
     </section>
@@ -86,10 +85,10 @@ require_once '../includes/navbar.php';
 
     <!-- SECCIÓN DE CONTACTO CON FORMULARIO -->
     <section class="py-5 bg-light">
-        <?php // BOOTSTRAP: .bg-light APLICA EL FONDO GRIS CLARO PARA DIFERENCIAR SECCIONES ?>
+        
         <div class="container contact-container">
             <div class="contact" id="contact">
-                <?php // GESTIÓN DE NOTIFICACIONES DE ÉXITO TRAS EL ENVÍO DEL FORMULARIO ?>
+                <!-- SECCIÓN DE CONTACTO -->
                 <h2 class="contact-tittle__s_color text-center mb-4"><strong>CONTACTE</strong></h2>
                 
                 <?php if(isset($_GET['success']) && $_GET['success'] == 'message_sent'): ?>
